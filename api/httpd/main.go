@@ -12,7 +12,7 @@ func main() {
 
 	r.GET("/ping", handler.PingGet())
 	r.GET("/newsfeed", handler.NewsfeedGet(feed))
-	r.POST("/newsfeed", handler.NewsfeedPost(*feed))
+	r.POST("/newsfeed", handler.NewsfeedPost(feed))
 
 	r.Run()
 
